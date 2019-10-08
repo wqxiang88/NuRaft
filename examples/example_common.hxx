@@ -121,7 +121,7 @@ std::vector<std::string> tokenize(const char* str, char c = ' ') {
     return tokens;
 }
 
-void loop(const std::string prompt_prefix = "calc ") {
+void loop(const std::string& prompt_prefix = "calc ") {
     char cmd[1000];
     std::string prompt = prompt_prefix + std::to_string(stuff.server_id_) + "> ";
     while (true) {
