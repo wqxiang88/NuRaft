@@ -121,9 +121,9 @@ std::vector<std::string> tokenize(const char* str, char c = ' ') {
     return tokens;
 }
 
-void loop() {
+void loop(const std::string prompt_prefix = "calc ") {
     char cmd[1000];
-    std::string prompt = "calc " + std::to_string(stuff.server_id_) + "> ";
+    std::string prompt = prompt_prefix + std::to_string(stuff.server_id_) + "> ";
     while (true) {
 #if defined(__linux__) || defined(__APPLE__)
         std::cout << _CLM_GREEN << prompt << _CLM_END;
